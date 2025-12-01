@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil MTs Al Hidayah Jenu</title>
 
-    <!-- Load Tailwind -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Konfigurasi Tailwind warna custom -->
+    <!-- Konfigurasi warna custom -->
     <script>
       tailwind.config = {
         theme: {
@@ -19,261 +19,148 @@
               accentMagenta: "#de258b",
               accentYellow: "#ffde59",
             },
+            fontFamily: {
+              sans: ["system-ui", "ui-sans-serif", "sans-serif"],
+            },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-white text-slate-900 scroll-smooth antialiased">
+  <body class="bg-white text-slate-900 scroll-smooth antialiased font-sans">
     <!-- Background dekoratif -->
-    <div class="pointer-events-none fixed inset-0 -z-10 opacity-60">
+    <div class="pointer-events-none fixed inset-0 -z-10 opacity-70">
       <div
-        class="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-primary blur-3xl"
+        class="absolute -top-32 -left-24 h-64 w-64 rounded-full bg-primary blur-3xl"
       ></div>
       <div
         class="absolute top-40 -right-16 h-72 w-72 rounded-full bg-accentMagenta blur-3xl"
       ></div>
       <div
-        class="absolute bottom-0 left-1/2 h-48 w-80 -translate-x-1/2 bg-accentYellow/60 blur-3xl"
+        class="absolute bottom-0 left-1/2 h-52 w-80 -translate-x-1/2 bg-accentYellow/70 blur-3xl"
       ></div>
     </div>
 
-    <!-- NAVBAR -->
-    <header
-      class="sticky top-0 z-40 border-b border-slate-200/60 bg-white/80 backdrop-blur"
-    >
-      <div
-        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4"
-      >
-        <div class="flex items-center gap-3">
-          <!-- LOGO: gunakan gambar yang kamu kirim -->
-          <!-- Pastikan nama file dan lokasi benar -->
+    <main class="mx-auto max-w-5xl px-4 py-6 md:py-10">
+      <!-- HEADER + HERO -->
+      <section class="space-y-6 md:space-y-8" data-animate>
+        <!-- Header tanpa navigasi -->
+        <header class="flex flex-wrap items-center gap-4">
           <div
-            class="h-10 w-10 rounded-2xl bg-white/80 shadow-md flex items-center justify-center ring-1 ring-slate-200 overflow-hidden"
+            class="h-14 w-14 rounded-2xl bg-white/80 shadow-md flex items-center justify-center ring-1 ring-slate-200 overflow-hidden"
           >
             <img
-              src="image-removebg-preview.png"
-              alt="MTs Al Hidayah Jenu"
-              class="h-9 w-auto object-contain"
+              src="images/image-removebg-preview.png"
+              alt="Logo MTs Al Hidayah Jenu"
+              class="h-12 w-auto object-contain"
             />
           </div>
-
           <div>
-            <div class="text-xs uppercase tracking-[0.22em] text-primary/80">
+            <p class="text-xs uppercase tracking-[0.28em] text-primary/85">
               Profil Madrasah
-            </div>
-            <div class="text-sm font-semibold text-slate-900">
+            </p>
+            <h1
+              class="text-xl font-extrabold tracking-tight text-slate-900 md:text-2xl"
+            >
               MTs Al Hidayah Jenu
-            </div>
-            <div class="text-[11px] text-slate-500">Matsda</div>
+            </h1>
+            <p class="text-xs text-slate-500">Matsda</p>
           </div>
-        </div>
+        </header>
 
-        <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
-          <a
-            href="#profil"
-            class="py-1 text-slate-600 hover:text-primary transition-colors"
-          >
-            Profil
-          </a>
-          <a
-            href="#visi-misi"
-            class="py-1 text-slate-600 hover:text-primary transition-colors"
-          >
-            Visi &amp; Misi
-          </a>
-          <a
-            href="#kurikulum"
-            class="py-1 text-slate-600 hover:text-primary transition-colors"
-          >
-            Kurikulum
-          </a>
-          <a
-            href="#kontak"
-            class="py-1 text-slate-600 hover:text-primary transition-colors"
-          >
-            Alamat &amp; Kontak
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="mx-auto max-w-6xl px-4">
-      <!-- HERO / PROFIL -->
-      <section id="profil" class="py-10 md:py-16">
-        <div class="grid gap-10 md:grid-cols-[1.15fr_0.95fr] md:items-center">
-          <!-- Kiri -->
-          <div class="space-y-6">
+        <!-- Hero utama -->
+        <div class="grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-center">
+          <!-- Kiri: Visi singkat -->
+          <div class="space-y-4">
             <div
-              class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 shadow-sm ring-1 ring-slate-200/70"
+              class="inline-flex flex-wrap items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary shadow-sm ring-1 ring-slate-200/70"
             >
               <span
-                class="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-primary to-accentPink"
+                class="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-primary via-accentMagenta to-accentPink"
               ></span>
-              <span>MTs Al Hidayah Jenu</span>
-              <span class="text-slate-400">·</span>
-              <span class="text-primary font-semibold">Matsda</span>
+              <span>Madrasah Digipreneur</span>
             </div>
 
-            <div class="space-y-3">
-              <h1
-                class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl"
-              >
-                MTs Al Hidayah Jenu Jenu
-              </h1>
-              <p
-                class="inline-flex items-center gap-2 rounded-full border border-accentYellow/60 bg-accentYellow/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary"
-              >
-                Madrasah Digipreneur
-              </p>
-            </div>
-
-            <div
-              class="space-y-3 rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm"
+            <h2
+              class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl"
             >
-              <h2
-                class="text-sm font-semibold uppercase tracking-wide text-primary"
-              >
-                Visi Madrasah
-              </h2>
-              <p class="text-sm italic leading-relaxed text-slate-700">
-                “Terwujudnya MTs Al Hidayah Jenu sebagai lembaga pendidikan yang
-                religious berprestasi tinggi dan berkompeten”
-              </p>
-              <p class="text-xs font-medium text-slate-600">
-                Indikator visi:
-                <span class="font-semibold text-primary"
-                  >Religius, Berprestasi dan Berkompeten</span
-                >
-              </p>
-            </div>
+              “Religius, Berprestasi, Berkompeten”
+            </h2>
 
-            <div class="flex flex-wrap gap-3">
-              <a
-                href="#visi-misi"
-                class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary via-accentMagenta to-accentPink px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-accentPink/30 transition hover:-translate-y-[2px]"
+            <p class="text-sm leading-relaxed text-slate-700">
+              “Terwujudnya MTs Al Hidayah Jenu sebagai lembaga pendidikan yang
+              religious berprestasi tinggi dan berkompeten”.
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 shadow-sm ring-1 ring-slate-200"
               >
-                Visi &amp; Misi
-                <span
-                  class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[10px]"
-                >
-                  ↓
-                </span>
-              </a>
-              <a
-                href="#kontak"
-                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-[2px] hover:border-primary/50 hover:text-primary"
+                <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                Religius
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 shadow-sm ring-1 ring-slate-200"
               >
-                Alamat &amp; Kontak
-              </a>
+                <span class="h-1.5 w-1.5 rounded-full bg-accentPink"></span>
+                Berprestasi
+              </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 shadow-sm ring-1 ring-slate-200"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-accentMagenta"></span>
+                Berkompeten
+              </span>
             </div>
           </div>
 
-          <!-- Kanan: Kartu alamat & kontak -->
+          <!-- Kanan: Card Kurikulum + Info singkat -->
           <div class="relative">
             <div
-              class="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-primary via-accentMagenta to-accentPink opacity-70 blur-2xl"
+              class="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-primary via-accentMagenta to-accentPink opacity-60 blur-2xl"
             ></div>
-
             <div
-              class="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-xl backdrop-blur"
+              class="relative rounded-3xl border border-slate-200/80 bg-white/95 p-5 shadow-xl backdrop-blur-md space-y-4"
             >
-              <div class="flex items-center justify-between gap-2">
-                <h3
-                  class="text-sm font-semibold uppercase tracking-wide text-slate-700"
-                >
-                  Alamat &amp; Kontak
-                </h3>
-                <span
-                  class="rounded-full bg-accentYellow/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.17em] text-primary"
-                >
-                  MTs Al Hidayah Jenu
-                </span>
+              <div
+                class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/90"
+              >
+                Kurikulum
               </div>
+              <p class="text-sm text-slate-700">Kurikulum:</p>
+              <p class="text-lg font-extrabold tracking-tight text-primary">
+                Madrasah Digipreneur
+              </p>
 
-              <div class="mt-5 space-y-4 text-sm">
-                <div
-                  class="rounded-2xl bg-slate-50/80 p-3 ring-1 ring-slate-100"
-                >
-                  <p
-                    class="text-xs font-semibold uppercase tracking-wide text-primary/90"
-                  >
-                    Alamat
-                  </p>
-                  <p class="mt-1 leading-relaxed text-slate-700">
-                    Jl. Raya Semarang No.22, RT 001 RW 001,<br />
-                    Tuban, Jawa Timur. 62352.
-                  </p>
-                </div>
+              <div
+                class="mt-2 h-px w-full bg-gradient-to-r from-primary/20 via-accentMagenta/30 to-accentYellow/50"
+              ></div>
 
-                <div
-                  class="grid gap-3 rounded-2xl bg-slate-50/80 p-3 ring-1 ring-slate-100 sm:grid-cols-2"
+              <div class="space-y-1 text-xs text-slate-600">
+                <p
+                  class="font-semibold uppercase tracking-[0.18em] text-primary/85"
                 >
-                  <div class="space-y-1">
-                    <p
-                      class="text-xs font-semibold uppercase tracking-wide text-primary/90"
-                    >
-                      Instagram
-                    </p>
-                    <p class="text-sm font-medium text-slate-800">
-                      mtsalhidayah.jenu
-                    </p>
-                  </div>
-                  <div class="space-y-1">
-                    <p
-                      class="text-xs font-semibold uppercase tracking-wide text-primary/90"
-                    >
-                      YouTube
-                    </p>
-                    <p class="text-sm font-medium text-slate-800">
-                      MTs Al Hidayah Jenu
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-5 flex flex-wrap gap-2 text-[11px] text-slate-500">
-                <span
-                  class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1"
-                >
-                  <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                  Religius
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1"
-                >
-                  <span class="h-1.5 w-1.5 rounded-full bg-accentPink"></span>
-                  Berprestasi
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1"
-                >
-                  <span
-                    class="h-1.5 w-1.5 rounded-full bg-accentMagenta"
-                  ></span>
-                  Berkompeten
-                </span>
+                  Alamat
+                </p>
+                <p class="text-[11px] leading-relaxed">
+                  Jl. Raya Semarang No.22, RT 001 RW 001,<br />
+                  Tuban, Jawa Timur. 62352.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- VISI & MISI -->
-      <section id="visi-misi" class="py-10 md:py-16">
+      <!-- VISI & MISI DETAIL -->
+      <section class="mt-10 md:mt-14" data-animate>
         <div
-          class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm md:p-9"
+          class="rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-sm md:p-7 space-y-6"
         >
-          <div
-            class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-5"
-          >
-            <div>
-              <h2
-                class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl"
-              >
-                Visi &amp; Misi MTs Al Hidayah Jenu
-              </h2>
-            </div>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h3 class="text-lg font-bold tracking-tight text-slate-900">
+              Visi &amp; Misi MTs Al Hidayah Jenu
+            </h3>
             <div
               class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary"
             >
@@ -284,41 +171,44 @@
             </div>
           </div>
 
-          <div class="mt-6 grid gap-8 md:grid-cols-2 md:gap-10">
+          <div class="grid gap-6 md:grid-cols-2 md:gap-10">
             <!-- Visi -->
             <div class="space-y-3">
-              <h3
-                class="text-sm font-semibold uppercase tracking-wide text-primary"
+              <p
+                class="text-xs font-semibold uppercase tracking-[0.2em] text-primary/90"
               >
                 Visi Madrasah
-              </h3>
+              </p>
               <p class="text-sm leading-relaxed text-slate-700">
                 “Terwujudnya MTs Al Hidayah Jenu sebagai lembaga pendidikan yang
-                religious berprestasi tinggi dan berkompeten”
+                religious berprestasi tinggi dan berkompeten”.
               </p>
               <div
                 class="rounded-2xl bg-gradient-to-r from-primary/5 via-accentMagenta/5 to-accentPink/5 p-4 text-sm"
               >
                 <p
-                  class="text-xs font-semibold uppercase tracking-wide text-primary"
+                  class="text-xs font-semibold uppercase tracking-[0.2em] text-primary/90"
                 >
                   Indikator Visi
                 </p>
                 <p class="mt-1 font-medium text-slate-800">
-                  Religius, Berprestasi dan Berkompeten
+                  Religius, Berprestasi dan Berkompeten.
                 </p>
               </div>
             </div>
 
-            <!-- Misi -->
+            <!-- Misi (bisa di-expand) -->
             <div class="space-y-3">
-              <h3
-                class="text-sm font-semibold uppercase tracking-wide text-primary"
+              <p
+                class="text-xs font-semibold uppercase tracking-[0.2em] text-primary/90"
               >
                 Misi Madrasah
-              </h3>
+              </p>
+
               <ol
-                class="space-y-2 text-sm leading-relaxed text-slate-700 list-decimal list-inside"
+                id="misiList"
+                class="space-y-2 text-sm leading-relaxed text-slate-700 list-decimal list-inside overflow-hidden transition-[max-height] duration-500"
+                style="max-height: 10rem"
               >
                 <li>
                   Membiasakan peserta didik berdo’a setiap memulai pelajaran.
@@ -345,62 +235,31 @@
                   Membekali murid dengan penguatan keterampilan abad ke-21.
                 </li>
               </ol>
+
+              <button
+                id="misiToggle"
+                type="button"
+                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-primary shadow-sm hover:border-primary/60 hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/40"
+              >
+                Lihat misi lengkap
+                <span class="text-[11px]" id="misiToggleIcon">▼</span>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- KURIKULUM -->
-      <section id="kurikulum" class="py-10 md:py-16">
-        <div class="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-          <div class="order-2 md:order-1">
-            <div
-              class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm"
-            >
-              <h2
-                class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl"
-              >
-                Kurikulum
-              </h2>
-              <div
-                class="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary via-accentMagenta to-accentPink px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white"
-              >
-                Madrasah Digipreneur
-              </div>
-            </div>
-          </div>
-
-          <div class="order-1 md:order-2">
-            <div class="relative">
-              <div
-                class="absolute -inset-0.5 rounded-3xl bg-gradient-to-tr from-primary via-accentYellow to-accentPink opacity-70 blur-2xl"
-              ></div>
-              <div
-                class="relative flex h-full flex-col justify-center rounded-3xl border border-slate-200/80 bg-white/95 p-6 shadow-xl backdrop-blur"
-              >
-                <div class="space-y-3">
-                  <p class="text-sm text-slate-700">Kurikulum:</p>
-                  <p class="text-lg font-extrabold tracking-tight text-primary">
-                    Madrasah Digipreneur
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- KONTAK -->
-      <section id="kontak" class="pb-10 pt-6 md:pb-16">
+      <!-- ALAMAT & KONTAK -->
+      <section class="mt-10 md:mt-14 mb-10 md:mb-14" data-animate>
         <div
-          class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm md:p-8"
+          class="rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-sm backdrop-blur-sm md:p-7"
         >
           <div
-            class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-5"
+            class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4"
           >
-            <h2 class="text-xl font-bold tracking-tight text-slate-900">
+            <h3 class="text-lg font-bold tracking-tight text-slate-900">
               Alamat &amp; Kontak
-            </h2>
+            </h3>
             <span
               class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary"
             >
@@ -408,12 +267,13 @@
             </span>
           </div>
 
-          <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <div class="mt-5 grid gap-6 md:grid-cols-3">
+            <!-- Alamat -->
             <div
-              class="md:col-span-2 space-y-3 text-sm leading-relaxed text-slate-700"
+              class="md:col-span-2 space-y-2 text-sm leading-relaxed text-slate-700"
             >
               <p
-                class="text-xs font-semibold uppercase tracking-wide text-primary/90"
+                class="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90"
               >
                 Alamat
               </p>
@@ -423,10 +283,11 @@
               </p>
             </div>
 
+            <!-- Sosial -->
             <div class="space-y-4 text-sm">
               <div>
                 <p
-                  class="text-xs font-semibold uppercase tracking-wide text-primary/90"
+                  class="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90"
                 >
                   Instagram
                 </p>
@@ -434,7 +295,7 @@
               </div>
               <div>
                 <p
-                  class="text-xs font-semibold uppercase tracking-wide text-primary/90"
+                  class="text-xs font-semibold uppercase tracking-[0.18em] text-primary/90"
                 >
                   YouTube
                 </p>
@@ -446,10 +307,61 @@
           </div>
         </div>
 
-        <footer class="mt-6 pb-6 text-center text-[11px] text-slate-500">
+        <footer class="mt-6 text-center text-[11px] text-slate-500">
           MTs Al Hidayah Jenu · Matsda
         </footer>
       </section>
     </main>
+
+    <!-- JavaScript untuk animasi & toggle misi -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Animasi fade-in saat scroll
+        const animated = document.querySelectorAll("[data-animate]");
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("opacity-100", "translate-y-0");
+                entry.target.classList.remove("opacity-0", "translate-y-6");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        animated.forEach((el) => {
+          el.classList.add(
+            "opacity-0",
+            "translate-y-6",
+            "transition-all",
+            "duration-700"
+          );
+          observer.observe(el);
+        });
+
+        // Toggle misi
+        const misiList = document.getElementById("misiList");
+        const toggleBtn = document.getElementById("misiToggle");
+        const toggleIcon = document.getElementById("misiToggleIcon");
+
+        if (misiList && toggleBtn) {
+          let expanded = false;
+          toggleBtn.addEventListener("click", () => {
+            expanded = !expanded;
+            if (expanded) {
+              misiList.style.maxHeight = "100rem";
+              toggleBtn.firstChild.textContent = "Sembunyikan misi";
+              toggleIcon.textContent = "▲";
+            } else {
+              misiList.style.maxHeight = "10rem";
+              toggleBtn.firstChild.textContent = "Lihat misi lengkap";
+              toggleIcon.textContent = "▼";
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
